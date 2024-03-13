@@ -53,7 +53,7 @@ const PostInterview = () => {
             <Stack direction="column" justifyContent="flex-start" alignItems="center" sx={{minHeight: "100vh", width: "100vw", gap: "60px", bgcolor: theme.palette.grey[200]}}>
             <AppBar position="static" sx={{bgcolor: theme.palette.common.black}}>
                 <Toolbar sx={{bgcolor: theme.palette.common.black}}>
-                    <Box sx={{fontSize: "large", color: theme.palette.common.white, flexGrow: 1, cursor: 'pointer'}} onClick={() => { openTab('https://interview-with-ai.vercel.app')}}>Interview With AI</Box>
+                    <Box sx={{fontSize: "large", color: theme.palette.common.white, flexGrow: 1, cursor: 'pointer'}} onClick={() => { openTab('https://ai-interview-platform.vercel.app')}}>Interview With AI</Box>
                     <Stack direction="row" gap="45px">
                         <Avatar src={selfie} sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://github.com/iamsuhail") }}></Avatar>
                         <Stack justifyContent="center" alignItems="center">
@@ -100,11 +100,11 @@ const PostInterview = () => {
         <Stack direction="column" justifyContent="flex-start" alignItems="center" sx={{minHeight: "100vh", width: "100vw", gap: "60px", bgcolor: theme.palette.grey[200]}}>
             <AppBar position="static" sx={{bgcolor: theme.palette.primary.main}}>
                 <Toolbar sx={{bgcolor: theme.palette.common.black}}>
-                    <Box sx={{fontSize: "large", color: theme.palette.common.white, flexGrow: 1}} onClick={() => { window.location.href = 'https://interview-with-ai.vercel.app'}}>Interview With AI</Box>
+                    <Box sx={{fontSize: "large", color: theme.palette.common.white, flexGrow: 1}} onClick={() => { window.location.href = 'https://ai-interview-platform.vercel.app'}}>Interview With AI</Box>
                     <Stack direction="row" gap="45px">
-                        <Avatar src={selfie} sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://laykenv.github.io/portfolio/") }}></Avatar>
+                        <Avatar src={selfie} sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://github.com/iamsuhail") }}></Avatar>
                         <Stack justifyContent="center" alignItems="center">
-                            <GitHubIcon fontSize="large" sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://github.com/LaykenV/interviewWithAI") }}></GitHubIcon>
+                            <GitHubIcon fontSize="large" sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://github.com/iamsuhail/AI_Interview_Platform") }}></GitHubIcon>
                         </Stack>
                     </Stack>
                 </Toolbar>
@@ -114,7 +114,7 @@ const PostInterview = () => {
                 items.map( (item, i) => <FeedbackItem key={i} item={item} question={questions[i]} answer={answers[i]}/> )
             }
             </Carousel>
-            <Button onClick={() => {window.location.href = 'https://interview-with-ai.vercel.app'}} variant="contained">Return Home</Button>
+            <Button onClick={() => {window.location.href = 'https://ai-interview-platform.vercel.app'}} variant="contained">Return Home</Button>
         </Stack>
     )
 };

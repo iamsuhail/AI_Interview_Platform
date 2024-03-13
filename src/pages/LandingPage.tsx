@@ -52,9 +52,9 @@ const LandingPage = () => {
 
     return(
         <Stack direction="column" justifyContent="flex-start" alignItems="center" sx={{minHeight: "100vh", width: "100vw", gap: "60px"}}>
-            <AppBar position="static" sx={{bgcolor: theme.palette.common.black}}>
+            <AppBar position="static">
                 <Toolbar sx={{bgcolor: theme.palette.common.black}}>
-                    <Box sx={{fontSize: "large", color: theme.palette.common.white, flexGrow: 1, cursor: 'pointer'}} onClick={() => { window.location.href = 'https://interview-with-ai.vercel.app'}}>Interview With AI</Box>
+                    <Box sx={{fontSize: "large", color: theme.palette.common.white, flexGrow: 1, cursor: 'pointer'}} onClick={() => { window.location.href = 'https://ai-interview-platform.vercel.app'}}>Interview With AI</Box>
                     <Stack direction="row" gap="45px">
                         <Avatar src={selfie} sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://github.com/iamsuhail") }}></Avatar>
                         <Stack justifyContent="center" alignItems="center">
