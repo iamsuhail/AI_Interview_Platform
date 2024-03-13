@@ -179,7 +179,7 @@ const Interview = () => {
     if (isMedium) {
         return(
             <Stack sx={{height: '100vh', width: '100vw'}} justifyContent="flex-start" alignItems="center">
-            <AppBar position="static" sx={{bgcolor: theme.palette.primary.main}}>
+            <AppBar position="static" sx={{bgcolor: theme.palette.common.black}}>
                 <Toolbar sx={{bgcolor: theme.palette.common.black}}>
                     <Box sx={{fontSize: "large", color: theme.palette.common.white, flexGrow: 1, cursor: 'pointer'}} onClick={() => { window.location.href = 'https://interview-with-ai.vercel.app'}}>Interview With AI</Box>
                     <Stack direction="row" gap="45px">
@@ -227,7 +227,7 @@ const Interview = () => {
     return(
         <Stack sx={{height: '100vh', width: '100vw'}} justifyContent="flex-start" alignItems="center">
             <AppBar position="static" sx={{bgcolor: theme.palette.primary.main}}>
-                <Toolbar>
+                <Toolbar sx={{bgcolor: theme.palette.common.black}}>
                     <Box sx={{fontSize: "large", color: theme.palette.common.white, flexGrow: 1, cursor:'pointer'}} onClick={() => { window.location.href = 'https://interview-with-ai.vercel.app'}}>Interview With AI</Box>
                     <Stack direction="row" gap="45px">
                         <Avatar src={selfie} sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://laykenv.github.io/portfolio/") }}></Avatar>
