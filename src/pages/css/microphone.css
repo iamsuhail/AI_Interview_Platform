@@ -1,0 +1,32 @@
+.animate {
+    border-width: 2px !important;
+    border-style: solid !important;
+    animation: 2s infinite colorBorder;
+}
+
+@keyframes colorBorder {
+    0% {
+        border-left-color: greenyellow;
+        border-right-color: teal;
+        border-bottom-color: green;
+        border-top-color: yellow;
+    }
+    25% {
+        border-left-color: green;
+        border-right-color: yellow;
+        border-bottom-color: teal;
+        border-top-color: greenyellow;
+    }
+    75% {
+        border-left-color: teal;
+        border-right-color: greenyellow;
+        border-bottom-color: yellow;
+        border-top-color: green;
+    }
+    100% {
+        border-left-color: yellow;
+        border-right-color: green;
+        border-bottom-color: greenyellow;
+        border-top-color: teal;
+    }
+}
