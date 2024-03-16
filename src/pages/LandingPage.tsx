@@ -76,9 +76,11 @@ const LandingPage = () => {
                 items.map( (item, i) => <Item key={i} item={item} /> )
             }
             </Carousel>
+            <Box>
             <label htmlFor="file-upload" style={{ border: "2px solid #ccc", display: "inline-block", padding: "6px 12px", cursor: "pointer", backgroundColor: "#1769aa", color: "white", borderRadius: "5px", fontFamily: "Arial, sans-serif" }}>Upload Resume</label>
 <input id="file-upload" type="file" style={{ display: "none" }} accept="application/pdf" onChange={(e) => updateFileName(e.target as HTMLInputElement)} />
 <span id="file-name" className="file-selected" style={{ fontFamily: "Arial, sans-serif", marginLeft: "10px", color: "#666"}}>No file selected</span>
+            </Box>
             <Button onClick={() => {setModalDisplay(!modalDisplay)}} variant="contained">Get Started</Button>
             <PreInterview display={modalDisplay} setDisplay={setModalDisplay}></PreInterview>
         </Stack>

@@ -179,13 +179,13 @@ const Interview = () => {
     if (isMedium) {
         return(
             <Stack sx={{height: '100vh', width: '100vw'}} justifyContent="flex-start" alignItems="center">
-            <AppBar position="static" sx={{bgcolor: theme.palette.common.black}}>
+            <AppBar position="static">
                 <Toolbar sx={{bgcolor: theme.palette.common.black}}>
-                    <Box sx={{fontSize: "large", color: theme.palette.common.white, flexGrow: 1, cursor: 'pointer'}} onClick={() => { window.location.href = 'https://ai-interview-platform.vercel.app'}}>InterviewAI</Box>
+                    <Box sx={{fontSize: "large", flexGrow: 1, cursor: 'pointer'}} onClick={() => { window.location.href = '/'}}>Interview With AI</Box>
                     <Stack direction="row" gap="45px">
                         <Avatar src={selfie} sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://github.com/iamsuhail") }}></Avatar>
                         <Stack justifyContent="center" alignItems="center">
-                            <GitHubIcon fontSize="large" sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://github.com/iamsuhail/AI_Interview_Platform") }}></GitHubIcon>
+                            <GitHubIcon fontSize="large" sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://github.com/iamsuhail") }}></GitHubIcon>
                         </Stack>
                     </Stack>
                 </Toolbar>
@@ -203,7 +203,7 @@ const Interview = () => {
                     { questions[1] && questionNumber === 3 ? <TypewriterComponent onInit={(typewriter) => {typewriter.changeDelay(40).typeString(questions[questionNumber]).start()}}/> : null } 
                     { questions[1] && questionNumber === 4 ? <TypewriterComponent onInit={(typewriter) => {typewriter.changeDelay(40).typeString(questions[questionNumber]).start()}}/> : null } 
                     </Stack>
-                    <form onSubmit={formik.handleSubmit} id='myForm' style={{height: '50%', width: '90%', position: 'relative', border: `1px solid ${theme.palette.primary.main}`, borderRadius: '5px'}}>
+                    <form onSubmit={formik.handleSubmit} id='myForm' style={{height: '50%', width: '90%', position: 'relative',border: `1px solid ${theme.palette.primary.main}`,  borderRadius: '5px'}}>
                         <TextField id="answer" sx={{height: '100%', width: '100%', '> div > fieldset': {border: 'none'}}} name="answer" multiline={true} minRows={10} value={formik.values.answer} onChange={formik.handleChange} error={formik.touched.answer && Boolean(formik.errors.answer)} helperText={formik.touched.answer && formik.errors.answer}></TextField>
                         <Box onClick={transcript == '' ? () => {formik.resetForm()} : () => {resetTranscript()}} sx={{position: 'absolute', top: '5px', right: '5px', zIndex: 111, cursor: 'pointer'}}><RestartAltIcon></RestartAltIcon></Box>
                     </form>
@@ -228,35 +228,35 @@ const Interview = () => {
         <Stack sx={{height: '100vh', width: '100vw'}} justifyContent="flex-start" alignItems="center">
             <AppBar position="static" sx={{bgcolor: theme.palette.primary.main}}>
                 <Toolbar sx={{bgcolor: theme.palette.common.black}}>
-                    <Box sx={{fontSize: "large", color: theme.palette.common.white, flexGrow: 1, cursor:'pointer'}} onClick={() => { window.location.href = 'https://ai-interview-platform.vercel.app'}}>InterviewAI</Box>
+                    <Box sx={{fontSize: "large", color: theme.palette.common.white, flexGrow: 1, cursor:'pointer'}} onClick={() => { window.location.href = '/'}}>Interview With AI</Box>
                     <Stack direction="row" gap="45px">
-                        <Avatar src={selfie} sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://github.com/iamsuhail") }}></Avatar>
+                        <Avatar src={selfie} sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://iamsuhail.github.io") }}></Avatar>
                         <Stack justifyContent="center" alignItems="center">
-                            <GitHubIcon fontSize="large" sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://github.com/iamsuhail/AI_Interview_Platform") }}></GitHubIcon>
+                            <GitHubIcon fontSize="large" sx={{height: "40px", width: "40px", cursor: "pointer"}} onClick={() => { openTab("https://github.com/") }}></GitHubIcon>
                         </Stack>
                     </Stack>
                 </Toolbar>
             </AppBar>
             <Stack sx={{flexGrow: 1, width: '100%', backgroundColor: theme.palette.grey[200]}} justifyContent='center' alignItems='center'>
                 <Stack sx={{height: '80%', width: '90%', border: '1px solid lightgray', borderRadius: '5px', backgroundColor: theme.palette.common.white}} justifyContent='flex-start' alignItems='center'>
-                    <Stack direction='row' justifyContent='space-between' alignItems='center' sx={{width: '95%', height: '10%'}}>
+                    <Stack direction='row' justifyContent='space-between' alignItems='center' sx={{width: '95%', height: '10%', color:'black'}}>
                         <Box sx={{fontSize: 'large', fontWeight: 'bold'}}>{interviewLevel} {interviewJob} Interview</Box>
                         <Box sx={{fontSize: 'large', fontWeight: 'bold'}}> {questionNumber + 1} / 5</Box>
                     </Stack>
-                    <Stack sx={{height: '20%', width: '80%', textAlign: 'center', fontSize: 'large', fontWeight: '500'}} justifyContent='center' alignItems='center'>
+                    <Stack sx={{height: '20%', width: '80%', textAlign: 'center', fontSize: 'large', fontWeight: '500', color:'black'}} justifyContent='center' alignItems='center'>
                     { questions[1] && questionNumber === 0 ? <TypewriterComponent onInit={(typewriter) => {typewriter.changeDelay(40).typeString(questions[questionNumber]).start()}}/> : null }
                     { questions[1] && questionNumber === 1 ? <TypewriterComponent onInit={(typewriter) => {typewriter.changeDelay(40).typeString(questions[questionNumber]).start()}}/> : null } 
                     { questions[1] && questionNumber === 2 ? <TypewriterComponent onInit={(typewriter) => {typewriter.changeDelay(40).typeString(questions[questionNumber]).start()}}/> : null } 
                     { questions[1] && questionNumber === 3 ? <TypewriterComponent onInit={(typewriter) => {typewriter.changeDelay(40).typeString(questions[questionNumber]).start()}}/> : null } 
                     { questions[1] && questionNumber === 4 ? <TypewriterComponent onInit={(typewriter) => {typewriter.changeDelay(40).typeString(questions[questionNumber]).start()}}/> : null } 
                     </Stack>
-                    <form onSubmit={formik.handleSubmit} id='myForm' style={{height: '50%', width: '90%', position: 'relative', border: `1px solid ${theme.palette.primary.main}`, borderRadius: '5px'}}>
+                    <form onSubmit={formik.handleSubmit} id='myForm' style={{height: '50%', width: '90%', position: 'relative',border: `1px solid ${theme.palette.primary.main}`, borderRadius: '5px'}}>
                         <TextField id="answer" sx={{height: '100%', width: '100%', '> div > fieldset': {border: 'none'}}} name="answer" multiline={true} minRows={10} value={formik.values.answer} onChange={formik.handleChange} error={formik.touched.answer && Boolean(formik.errors.answer)} helperText={formik.touched.answer && formik.errors.answer}></TextField>
                         <Box onClick={transcript == '' ? () => {formik.resetForm()} : () => {resetTranscript()}} sx={{position: 'absolute', top: '5px', right: '5px', zIndex: 111, cursor: 'pointer'}}><RestartAltIcon></RestartAltIcon></Box>
                     </form>
                     <Stack direction='row' justifyContent='center' alignItems='center' sx={{width: '90%', height: "15%"}}>
                         <Box sx={{width: '33%'}}></Box>
-                        <Stack sx={{width: '33%', height: '90%'}} justifyContent='center' alignItems='center'>
+                        <Stack sx={{width: '33%', height: '90%', color: 'black'}} justifyContent='center' alignItems='center'>
                             <Button sx={{flexGrow: 1, outlineStyle: 'none !important', borderRadius: '30%'}} className={listening ? 'animate' : ''} onClick={listening ? () => {SpeechRecognition.stopListening()} : () => {SpeechRecognition.startListening({ continuous: true })}}>
                                 <MicIcon sx={{height: '100%'}}></MicIcon>
                             </Button>
